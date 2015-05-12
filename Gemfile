@@ -3,7 +3,13 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-gem 'bootstrap-sass', '2.0.0'
+
+
+#gem 'pg', '0.12.2'
+gem 'pg', '~> 0.18.0.pre20141117110243'
+
+gem 'bootstrap-sass', '~> 2.3'
+gem 'sass-rails', '~> 5.0'
 
 
 gem 'bcrypt-ruby', '3.0.1'
@@ -19,40 +25,37 @@ gem 'selenium-webdriver', '~> 2.35.1'
 
 # Use sqlite3 as the database for Active Record
 group :development do
-  gem 'sqlite3'
   gem 'annotate', '~> 2.4.1.beta'
   #gem 'guard'
 end
 
 group :assets do
-  gem 'sass-rails', '~> 5.0'
-
-  gem 'uglifier', '>= 1.3.0'
-
+  gem 'sprockets', '2.11.0'
   gem 'coffee-rails', '~> 4.1.0'
-
+  gem 'uglifier', '>= 1.3.0'
 end
 
 gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails'
-  #gem 'guard-rspec', '0.5.5'
+  gem 'guard-rspec'
+  gem 'capybara'
   #gem 'guard-spork', '0.3.2'
   #gem 'spork', '0.9.0'
   gem 'pry-nav'
+  gem 'minitest'
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
-  gem 'factory_girl_rails', '1.4.0'
-  gem 'cucumber-rails', '1.2.1', require: false
+  gem 'rb-fchange'
+  gem 'rb-notifu', '0.0.4'
+  # gem win32console is an old gem and not needed in Ruby 2.0
+  # add gem minitest before require minitest/autorun
+  #gem 'win32console'
+  #gem 'factory_girl_rails', '1.4.0'
+  #gem 'cucumber-rails', '1.2.1', require: false
   gem 'database_cleaner', '0.7.0'
-end
-
-
-group :production do
-  gem 'pg', '0.12.2'
 end
 
 

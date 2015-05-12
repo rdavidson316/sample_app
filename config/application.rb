@@ -31,5 +31,9 @@ module SampleApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    # per the instructions at http://richonrails.com/articles/working-with-bootstrap-sass
+    # this modification is needed for bootstrap to work with rails 4
+    # This is due to rails no longer compiling images in vendor assets by default.
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
