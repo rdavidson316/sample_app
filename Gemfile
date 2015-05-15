@@ -1,18 +1,29 @@
 source 'https://rubygems.org'
 
+# running Rails 4 needs to have this gem installed in order to use
+# attr_accessible
+gem 'protected_attributes'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
 
 #gem 'pg', '0.12.2'
+#gem 'pg', '~> 0.18.2'
 gem 'pg', '~> 0.18.0.pre20141117110243'
 
-gem 'bootstrap-sass', '~> 2.3'
+
+gem 'bootstrap-sass', '2.3.2.0'
 gem 'sass-rails', '~> 5.0'
 
 
-gem 'bcrypt-ruby', '3.0.1'
+#gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
+#gem 'bcrypt-ruby', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+#gem 'bcrypt-ruby', '3.0.1', :require => 'bcrypt'
+#gem 'bcrypt'
+
+gem 'bcrypt', '3.1.9'
+
 
 gem 'faker', '1.0.1'
 
@@ -25,7 +36,6 @@ gem 'selenium-webdriver', '~> 2.35.1'
 
 # Use sqlite3 as the database for Active Record
 group :development do
-  gem 'annotate', '~> 2.4.1.beta'
   #gem 'guard'
 end
 
@@ -45,6 +55,7 @@ group :test, :development do
   #gem 'spork', '0.9.0'
   gem 'pry-nav'
   gem 'minitest'
+  gem 'annotate', '~> 2.4.1.beta'
 end
 
 group :test do
