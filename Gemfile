@@ -64,7 +64,7 @@ group :test do
   # gem win32console is an old gem and not needed in Ruby 2.0
   # add gem minitest before require minitest/autorun
   #gem 'win32console'
-  #gem 'factory_girl_rails', '1.4.0'
+  gem 'factory_girl_rails', '1.4.0'
   #gem 'cucumber-rails', '1.2.1', require: false
   gem 'database_cleaner', '0.7.0'
 end
